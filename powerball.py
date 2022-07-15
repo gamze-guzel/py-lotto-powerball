@@ -1,18 +1,16 @@
-# lotto picker by manny juan  (juanm@wellsfargo.com or manny@bdt.com)
-
 from random import randint
 
 
 def pick_lotto():
-    maxm = 53
-    maxj = 6
+    maxm = 69
+    maxj = 5
     m = maxm
     # create all numbers from 0 to m
     r = list(range(m + 1))
     # start with an empty result
     v = []
     for j in range(maxj):
-        # get ith number from r...       
+        # get ith number from r...
         i = randint(1, m)
         n = r[i]
         # remove it from r...
@@ -20,6 +18,8 @@ def pick_lotto():
         m = m - 1
         # and append to the result
         v.append(n)
+    power_ball= randint(1,26)
+    v.append(f'Power Ball: {power_ball}')
     return v
 
 
